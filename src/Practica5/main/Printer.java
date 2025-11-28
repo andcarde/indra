@@ -1,4 +1,4 @@
-package main;
+package Practica5.main;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;

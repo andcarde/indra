@@ -1,4 +1,4 @@
-package main;
+package Practica5.main;
 
 public class Exercise2Reader {
 
