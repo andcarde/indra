@@ -21,4 +21,20 @@ public class Exercise2Printer {
 
         sentence.execute();
 	}
+
+	static void act_int() {
+		
+	}
+
+	static void int_pac2() {
+		
+	}
+
+	static void a_pagar1() {
+		
+	}
+
+	static void a_pagar2() {
+		
+	}
 }
