@@ -24,8 +24,10 @@ public class Launcher {
 		Exercise2Reader.int_pac1();
 		Exercise2Reader.act_int();
 		Exercise2Reader.int_pac2();
-		Exercise2Reader.a_pagar1();
-		Exercise2Reader.a_pagar2();
+        System.out.println();
+        Exercise2Reader.a_pagar1();
+        System.out.println();
+        Exercise2Reader.a_pagar2();
         System.out.println();
 		System.out.println("| Testing 3: Consulta de tabla de referencias cruzadas |\n");
 		Exercise3Reader.ref_cruz1();

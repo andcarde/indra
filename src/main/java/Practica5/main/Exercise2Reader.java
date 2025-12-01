@@ -18,7 +18,8 @@ public class Exercise2Reader {
 	}
 
 	static void a_pagar1() {
-		Exercise2Printer.a_pagar1();
+        String apellido = "Perez";
+		Exercise2Printer.a_pagar1(apellido);
 	}
 
 	static void a_pagar2() {
