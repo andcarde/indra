@@ -17,7 +17,7 @@ import java.util.Date;
 @AllArgsConstructor
 public abstract class BankingTransaction1 {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String txType = null;
     private Date txDate = null;
