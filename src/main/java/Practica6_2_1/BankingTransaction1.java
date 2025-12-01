@@ -11,11 +11,11 @@ import java.util.Date;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "banking_transaction")
+@Table(name = "banking_transaction1")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public abstract class BankingTransaction {
+public abstract class BankingTransaction1 {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;

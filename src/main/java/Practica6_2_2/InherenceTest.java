@@ -1,6 +1,4 @@
-package Practica6_2_1;
-
-import Practica6_2_2.StockTransaction2;
+package Practica6_2_2;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -9,7 +7,12 @@ public class InherenceTest {
     // Tres tablas: atributos diferentes para las hijas
 
     public static void main(String[] args) {
-        StockTransaction1 st = new StockTransaction1(
+        boolean isSale = false;
+        String stockSymbol = "Coca";
+        String companyName = "Coca-cola";
+        int numShares = 1000000;
+        double pricePerShare = 50.5;
+        StockTransaction2 st = new StockTransaction2(
                 "BUY",                       // txType
                 new Date(),                   // txDate
                 "Compra de acciones",         // txDescription
@@ -29,7 +32,7 @@ public class InherenceTest {
             boolean isDeposit = true;
             Double moneyAmount = 100.0;
 
-            CashTransaction1 ct = new CashTransaction1(txType, txDate, txDescription,
+            CashTransaction2 ct = new CashTransaction2(txType, txDate, txDescription,
                     txFee, isDeposit, moneyAmount);
             TransactionDAO.create(ct);
             TransactionDAO.create(st);

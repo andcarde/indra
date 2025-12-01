@@ -1,4 +1,4 @@
-package Practica6_2_1;
+package Practica6_2_2;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -10,7 +10,7 @@ public class TransactionDAO {
     private static final EntityManagerFactory emf =
             Persistence.createEntityManagerFactory("ProductoPU");
 
-    public static void create (BankingTransaction1 transaction) {
+    public static void create (BankingTransaction2 transaction) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
         et.begin();
