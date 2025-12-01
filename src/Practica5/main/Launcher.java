@@ -8,14 +8,14 @@ public class Launcher {
 		System.out.println("| Testing 1: Consultas simples |\n");
 
 		Exercise1Reader.pac1();
-		/*Exercise1Reader.pac2();
+		Exercise1Reader.pac2();
 		Exercise1Reader.pac3a();
 		Exercise1Reader.pac3b();
 		Exercise1Reader.pacxos();
 		Exercise1Reader.promXos();
 		Exercise1Reader.mod_pre();
 		Exercise1Reader.prom_mes();
-		Exercise1Reader.est_alta();*/
+		Exercise1Reader.est_alta();
 
 		
 		System.out.println("| Testing 2: Consultas en tablas relacionadas |\n");
