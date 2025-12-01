@@ -69,5 +69,24 @@ public class ProductoDAO {
         }
         return p;
     }
+
+
+    public  List<Producto> findByName(String nombre) {
+        EntityManager em = emf.createEntityManager();
+        List productos = null;
+
+        try {
+            productos = em.createNativeQuery(
+                            "SELECT * FROM productos WHERE nombre LIKE ?", Producto.class)
+                    .setParameter(1, "%" + nombre + "%")
+                    .getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
+        return productos;
+    }
+
 }
 

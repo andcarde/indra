@@ -10,9 +10,12 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class Producto {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-
+    @Column
     private String nombre;
+    @Column
     private Double precio;
+    @Embedded
+    private Dimensiones dimensiones;
 }
