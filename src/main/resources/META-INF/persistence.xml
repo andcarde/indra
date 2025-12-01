@@ -9,6 +9,12 @@
 
         <!-- Clases de entidad -->
         <class>Practica6.Producto</class>
+        <class>Practica6_2_1.BankingTransaction1</class>
+        <class>Practica6_2_1.CashTransaction1</class>
+        <class>Practica6_2_1.StockTransaction1</class>
+        <class>Practica6_2_2.BankingTransaction2</class>
+        <class>Practica6_2_2.CashTransaction2</class>
+        <class>Practica6_2_2.StockTransaction2</class>
 
         <properties>
             <!-- Configuración JDBC -->
@@ -25,7 +31,8 @@
             <property name="hibernate.format_sql" value="true"/>
 
             <!-- Generación del esquema -->
-            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <!-- <property name="hibernate.hbm2ddl.auto" value="update"/> -->
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
         </properties>
     </persistence-unit>
 </persistence>
