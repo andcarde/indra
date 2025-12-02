@@ -9,16 +9,21 @@ public class ConnectionVault {
 	private static Connection instance;
 	private static final String URL  = "jdbc:mysql://localhost:3306/clinica";
 	private static final String USER = "root";
-	private static final String PASS = "1234";
-	
-	static Connection get() {
-		if (ConnectionVault.instance == null)
-			ConnectionVault.makeConnection();
-		
-		return ConnectionVault.instance;
-	}
+	private static final String PASS = "root";
 
-	private static void testDriver() {
+    static Connection get() {
+        if (ConnectionVault.instance == null) {
+            ConnectionVault.makeConnection();
+            if (ConnectionVault.instance == null) {
+                // Si sigue siendo null, es que no se pudo conectar
+                throw new IllegalStateException("No se pudo establecer la conexión con la base de datos.");
+            }
+        }
+        return ConnectionVault.instance;
+    }
+
+
+    private static void testDriver() {
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
 	        System.out.println("TEST: Driver Found");
@@ -32,8 +37,10 @@ public class ConnectionVault {
 		
 		try {
 			ConnectionVault.instance = DriverManager.getConnection(URL, USER, PASS);
-		} catch (SQLException sqle) {
-			System.out.println("ERROR: The database connection could not be established.");
-		}
-	}
+		}  catch (SQLException sqle) {
+            System.out.println("ERROR: The database connection could not be established.");
+            sqle.printStackTrace();  // para ver mensaje de MySQL: usuario, contraseña, BD, etc.
+        }
+
+    }
 }

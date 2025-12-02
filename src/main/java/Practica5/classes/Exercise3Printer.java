@@ -14,6 +14,6 @@ public class Exercise3Printer {
     	sentence.add("GROUP BY floor");
     	sentence.add("ORDER BY floor;");
 
-        sentence.execute();
+        sentence.executeQuery();
 	}
 }
